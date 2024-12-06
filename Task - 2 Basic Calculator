@@ -1,0 +1,43 @@
+#Basic Calculater Program
+
+#Function to perform the selected operation
+def calculate(num1, num2, operation):
+    if operation == '1':
+        return num1 +num2
+    elif operation == '2':
+        return num1 - num2
+    elif operation == '3':
+        return num1 * num2
+    elif operation == '4':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error! Division by Zero."
+    else:
+        return "Invalid operation selected."
+
+# Main Program
+def main():
+    print("Welcom to Basic Calculator!")
+
+    # Input: Getting two numbers from the user
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    #Input: Displaying operation options
+    print("Select an operation:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+
+    #Input: Getting the operation choice from the user
+    operation = input("Enter the number corresponding to the operation: ")
+
+    #Performing the calculation and displaying the result
+    result = calculate(num1, num2, operation)
+    print("The result is:", result)
+
+# Running the main function
+if __name__ == "__main__":
+    main()
